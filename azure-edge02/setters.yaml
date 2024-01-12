@@ -7,8 +7,8 @@ metadata: # kpt-merge: /setters
     internal.kpt.dev/upstream-identifier: '|ConfigMap|default|setters'
 data:
   name: azure-edge02
-  subscription-id: example
-  client-id: example
-  client-secret: example
-  tenant-id: example
-  location: example
+  subscription-id: b3370808-5dca-4f11-aa5c-6f1bf69cf7a4
+  client-id: 9428986e-89f7-4028-acb5-d978b329d5ef
+  client-secret: Ep68Q~uNAorIIypjTrgfy9RTJ1k.etVucK4Gcaun
+  tenant-id: 2967ec51-991d-4291-b934-24ba41c27a93
+  location: uksouth
