@@ -5,6 +5,7 @@ metadata: # kpt-merge: default/example-pool0
   namespace: default
   annotations:
     internal.kpt.dev/upstream-identifier: 'cluster.x-k8s.io|MachinePool|default|example-pool0'
+    nephio.org/cluster-name: example
 spec:
   clusterName: example
   replicas: 1

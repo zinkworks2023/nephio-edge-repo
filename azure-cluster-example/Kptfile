@@ -5,6 +5,7 @@ metadata: # kpt-merge: /azure-cluster-example
   annotations:
     config.kubernetes.io/local-config: "true"
     internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|azure-cluster-example'
+    nephio.org/cluster-name: example
 upstream:
   type: git
   git:

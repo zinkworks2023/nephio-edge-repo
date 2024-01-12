@@ -5,6 +5,7 @@ metadata: # kpt-merge: default/example
   namespace: default
   annotations:
     internal.kpt.dev/upstream-identifier: 'infrastructure.cluster.x-k8s.io|AzureManagedControlPlane|default|example'
+    nephio.org/cluster-name: example
 spec:
   identityRef:
     apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
