@@ -20,3 +20,9 @@ upstreamLock:
     commit: d205796097a55346af8717a626841b8be133ea0d
 info:
   description: nephio workload azure cluster package
+pipeline:
+  mutators:
+  - name: PackageVariant.azure-cluster..0
+    image: gcr.io/kpt-fn/set-annotations:v0.1.4
+    configMap:
+      nephio.org/cluster-name: example
