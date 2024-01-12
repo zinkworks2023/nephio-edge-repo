@@ -1,0 +1,12 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: AzureManagedMachinePool
+metadata: # kpt-merge: default/example-pool0
+  name: example-pool0
+  namespace: default
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'infrastructure.cluster.x-k8s.io|AzureManagedMachinePool|default|example-pool0'
+    nephio.org/cluster-name: example
+spec:
+  mode: System
+  name: pool0
+  sku: Standard_D2s_v3

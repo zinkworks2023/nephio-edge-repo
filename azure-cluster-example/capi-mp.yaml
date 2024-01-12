@@ -1,0 +1,22 @@
+apiVersion: cluster.x-k8s.io/v1beta1
+kind: MachinePool
+metadata: # kpt-merge: default/example-pool0
+  name: example-pool0
+  namespace: default
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'cluster.x-k8s.io|MachinePool|default|example-pool0'
+    nephio.org/cluster-name: example
+spec:
+  clusterName: example
+  replicas: 1
+  template:
+    metadata: {}
+    spec:
+      bootstrap:
+        dataSecretName: ""
+      clusterName: example
+      infrastructureRef:
+        apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+        kind: AzureManagedMachinePool
+        name: example-pool0
+      version: v1.27.7

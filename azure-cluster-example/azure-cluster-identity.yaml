@@ -1,0 +1,18 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: AzureClusterIdentity
+metadata: # kpt-merge: default/cluster-identity
+  labels:
+    clusterctl.cluster.x-k8s.io/move-hierarchy: "true"
+  name: cluster-identity
+  namespace: default
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'infrastructure.cluster.x-k8s.io|AzureClusterIdentity|default|cluster-identity'
+    nephio.org/cluster-name: example
+spec:
+  allowedNamespaces: {}
+  clientID: example
+  clientSecret:
+    name: cluster-identity-secret
+    namespace: default
+  tenantID: example
+  type: ServicePrincipal

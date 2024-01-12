@@ -1,0 +1,18 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: AzureManagedControlPlane
+metadata: # kpt-merge: default/example
+  name: example
+  namespace: default
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'infrastructure.cluster.x-k8s.io|AzureManagedControlPlane|default|example'
+    nephio.org/cluster-name: example
+spec:
+  identityRef:
+    apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+    kind: AzureClusterIdentity
+    name: cluster-identity
+  location: example
+  resourceGroupName: nephio
+  sshPublicKey: ""
+  subscriptionID: example
+  version: v1.27.7
