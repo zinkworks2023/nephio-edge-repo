@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /zinkworks-azure-edge01
+  name: zinkworks-azure-edge01
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|zinkworks-azure-edge01'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/zinkworks2023/nephio-workload-cluster-azure
+    directory: azure-cluster-bp
+    ref: main
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/zinkworks2023/nephio-workload-cluster-azure
+    directory: azure-cluster-bp
+    ref: main
+    commit: d205796097a55346af8717a626841b8be133ea0d
+info:
+  description: nephio workload azure cluster package
