@@ -1,0 +1,21 @@
+apiVersion: config.porch.kpt.dev/v1alpha1
+kind: PackageVariant
+metadata: # kpt-merge: /azure-cluster
+  name: azure-cluster
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'config.porch.kpt.dev|PackageVariant|default|azure-cluster'
+spec:
+  annotations:
+    approval.nephio.org/policy: initial
+  upstream:
+    package: azure-cluster
+    repo: nephio-workload-cluster-azure
+    revision: main
+  downstream:
+    package: azure-cluster-example
+    repo: nephio-edge-repo
+  pipeline:
+    mutators:
+    - image: gcr.io/kpt-fn/set-annotations:v0.1.4
+      configMap:
+        nephio.org/cluster-name: example

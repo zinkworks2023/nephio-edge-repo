@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: # kpt-merge: /azure-context
+  name: azure-context
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    kpt.dev/config-injection: required
+    internal.kpt.dev/upstream-identifier: '|ConfigMap|default|azure-context'
+data:
+  subscription-id: example
+  client-id: example
+  client-secret: example
+  tenant-id: example
+  location: example
