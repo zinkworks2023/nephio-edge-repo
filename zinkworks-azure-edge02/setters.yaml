@@ -6,7 +6,7 @@ metadata: # kpt-merge: /setters
     config.kubernetes.io/local-config: "true"
     internal.kpt.dev/upstream-identifier: '|ConfigMap|default|setters'
 data:
-  name: example
+  name: zinkworks-azure-edge02
   subscription-id: example
   client-id: example
   client-secret: example
